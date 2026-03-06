@@ -124,15 +124,15 @@ Mở file `app/src/main/res/layout/activity_main.xml` và thay thế toàn bộ 
 
 ## Bước 3: Viết Code Java
 
-_Lưu ý: Các file Java dưới đây đều được tạo trong thư mục `app/src/main/java/com/daonq/demo_fragment/`_
+_Lưu ý: Các file Java dưới đây đều được tạo trong thư mục `app/src/main/java/com/user/demo_fragment/`_
 
 ### 3.1. Tạo SharedViewModel
 
-1. Chuột phải vào package `com.daonq.demo_fragment`, chọn **New -> Java Class**, đặt tên là `SharedViewModel`.
+1. Chuột phải vào package `com.user.demo_fragment`, chọn **New -> Java Class**, đặt tên là `SharedViewModel`.
 2. Class này sẽ chứa biến đếm để cả 2 màn hình cùng truy cập. Copy đoạn sau:
 
 ```java
-package com.daonq.demo_fragment;
+package com.user.demo_fragment;
 
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
@@ -158,11 +158,11 @@ public class SharedViewModel extends ViewModel {
 
 ### 3.2. Tạo FragmentOne
 
-1. Chuột phải vào package `com.daonq.demo_fragment`, chọn **New -> Java Class**, đặt tên là `FragmentOne`.
+1. Chuột phải vào package `com.user.demo_fragment`, chọn **New -> Java Class**, đặt tên là `FragmentOne`.
 2. Khi nhấn nút ở đây, ta sẽ gọi hàm `incrementCount()` của ViewModel. Copy đoạn sau:
 
 ```java
-package com.daonq.demo_fragment;
+package com.user.demo_fragment;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -211,7 +211,7 @@ public class FragmentOne extends Fragment {
 2. Màn hình này sẽ "lắng nghe" (observe) sự thay đổi của biến đếm. Cập nhật nội dung:
 
 ```java
-package com.daonq.demo_fragment;
+package com.user.demo_fragment;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -257,7 +257,7 @@ public class FragmentTwo extends Fragment {
 Mở file `MainActivity.java`, cập nhật lại code để xử lý logic khi bấm vào thanh điều hướng bên dưới, hệ thống sẽ chuyển đổi 2 Fragment.
 
 ```java
-package com.daonq.demo_fragment;
+package com.user.demo_fragment;
 
 import android.os.Bundle;
 
